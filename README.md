@@ -1,43 +1,73 @@
-# Next.js on Netlify Platform Starter
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HearkenHeart</title>
+</head>
+<body>
+    <header>
+        <h1>HearkenHeart</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">บริการ</a></li>
+                <li><a href="#appointment">นัดหมาย</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-[Live Demo](https://nextjs-platform-starter.netlify.app/)
+    <section id="hero">
+        <h2>คำปรึกษาที่คุณต้องการ</h2>
+        <p>ให้คำปรึกษาออนไลน์ในทุกด้าน</p>
+        <a href="#appointment" class="button">นัดหมายเลย</a>
+    </section>
 
-A modern starter based on Next.js 14 (App Router), Tailwind, daisyUI, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
+    <section id="services">
+        <h2>บริการของเรา</h2>
+        <div class="service-card">
+            <h3>การให้คำปรึกษาเฉพาะด้าน</h3>
+            <p>ให้คำปรึกษาในหลากหลายด้าน เช่น สุขภาพจิต การเงิน ฯลฯ</p>
+        </div>
+        <div class="service-card">
+            <h3>การสนับสนุน 24/7</h3>
+            <p>มีทีมงานพร้อมให้บริการตลอด 24 ชั่วโมง</p>
+        </div>
+    </section>
 
-In this site, Netlify Core Primitives are used both implictly for running Next.js features (e.g. Route Handlers, image optimization via `next/image`, and more) and also explicitly by the user code. 
+    <section id="appointment">
+        <h2>นัดหมายการให้คำปรึกษา</h2>
+        <form id="appointment-form">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" required>
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" required>
+            <label for="date">วันที่:</label>
+            <input type="date" id="date" required>
+            <label for="time">เวลา:</label>
+            <input type="time" id="time" required>
+            <button type="submit">นัดหมาย</button>
+        </form>
+    </section>
 
-Implicit usage means you're using any Next.js functionality and everything "just works" when deployed - all the plumbing is done for you. Explicit usage is framework-agnostic and typically provides more features than what Next.js exposes.
+    <section id="about">
+        <h2>เกี่ยวกับเรา</h2>
+        <p>HearkenHeart มุ่งมั่นที่จะให้คำปรึกษาที่มีคุณภาพและช่วยเหลือผู้คนในทุกด้าน</p>
+    </section>
 
-## Deploying to Netlify
+    <section id="contact">
+        <h2>ช่องทางการติดต่อ</h2>
+        <p>Email: example@hearkenheart.com</p>
+        <p>โทร: 012-345-6789</p>
+        <p>Line: <a href="https://line.me/R/ti/p/%40yourlineid">@yourlineid</a></p>
+    </section>
 
-This site requires [Netlify Next Runtime v5](https://docs.netlify.com/frameworks/next-js/overview/) for full functionality. That version is now being gradually rolled out to all Netlify accounts. 
+    <footer>
+        <p>&copy; 2024 HearkenHeart. สงวนลิขสิทธิ์.</p>
+    </footer>
 
-After deploying via the button below, please visit the **Site Overview** page for your new site to check whether it is already using the v5 runtime. If not, you'll be prompted to opt-in to to v5.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter)
-
-## Developing Locally
-
-1. Clone this repository, then run `npm install` in its root directory.
-
-2. For the starter to have full functionality locally (e.g. edge functions, blob store), please ensure you have an up-to-date version of Netlify CLI. Run:
-
-```
-npm install netlify-cli@latest -g
-```
-
-3. Link your local repository to the deployed Netlify site. This will ensure you're using the same runtime version for both local development and your deployed site.
-
-```
-netlify link
-```
-
-4. Then, run the Next.js development server via Netlify CLI:
-
-```
-netlify dev
-```
-
-If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
-
-
+    <script src="script.js"></script>
+</body>
+</html>
